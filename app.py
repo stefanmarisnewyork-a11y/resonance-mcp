@@ -460,7 +460,7 @@ SQLite today; real RMT DB later, same interface.
 
 
 
-DB_PATH = Path(__file__).resolve().parents[2] / "resonance.db"
+DB_PATH = Path(os.environ.get("DB_DIR", ".")) / "resonance.db"
 
 
 class DB:
